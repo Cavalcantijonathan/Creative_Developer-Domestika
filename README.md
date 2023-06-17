@@ -9,25 +9,19 @@ Neste projeto, explorei diferentes técnicas e ferramentas do desenvolvimento we
 Certifique-se de ter o Git instalado em sua máquina.
 
 Clone este repositório em seu ambiente local:
-```sh
+
 bash
-
-Copy code
-
+```sh
 git clone https://github.com/seu-usuario/creative-developer-domestika.git
+```
 Navegue até o diretório do projeto:
 
-
-<br/>
-
-
 bash
 
-Copy code
+```sh
 cd creative-developer-domestika
-Abra o arquivo index.html em seu navegador preferido para visualizar o site.
 ```
-
+Abra o arquivo index.html em seu navegador preferido para visualizar o site.
 
 <br/>
 
