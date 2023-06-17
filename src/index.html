@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <title>My Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.scss" >
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    </head>
+    <body> 
+        
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>                        
+            </ul>
+        </nav>        
+
+        <section id="about" class="about">            
+            <div class="empty"></div>
+            <article>
+                <div class="title">
+                    <h1>Jonathan Rocha</h1>
+                </div>
+                <div class="description">
+                    <p>I am passionate about exploring creative and unique concepts, and I constantly challenge myself to create attractive interfaces with usability, inspirational concepts and animations.</p>
+                </div>                
+            </article> 
+        </section>
+
+        <section class="service service-html sticky">
+
+            <article>
+                <figure>
+                    <img alt="Image Symbol" src="img/diamond.png" width="200"/>
+                </figure>
+                <div class="text">
+                    <h2>Webflow</h2>
+                    <p>💻💡 With strong skills in HTML, CSS, and JavaScript, I leverage the powerful Webflow as my primary tool to build responsive and visually stunning websites. The platform enables me to explore my creativity to the fullest, translating unique designs into interactive and functional interfaces.</p>
+                    <a href="#contact">More about</a>
+                </div>              
+            </article>            
+        
+        </section>
+
+        <section class="service service-css sticky">
+
+            <article>
+                <figure>
+                    <img alt="Image Symbol" src="img/triangle.png" width="200"/>
+                </figure>
+                <div class="text">
+                    <h2>UX/UI Design</h2>
+                    <p>🎨🌐 With a keen eye for aesthetics and a deep understanding of user experience principles, I strive to create visually stunning websites that not only look great but also provide seamless and intuitive user interactions.</p>
+                    <a href="#contact">More about</a>
+                </div>              
+            </article>               
+
+        </section>  
+        
+        <section class="service service-js sticky">
+
+            <article>
+                <figure>
+                    <img alt="Image Symbol" src="img/octagon.png" width="200"/>
+                </figure>
+                <div class="text">
+                    <h2>SEO</h2>
+                    <p>🔍✨ From strategic keyword research to optimizing tags and metadata, I implement the best SEO practices to ensure that websites have a search engine-friendly structure and are easily discovered by users.</p>
+                    <a href="#contact">More about</a>
+                </div>              
+            </article>               
+
+        </section>        
+        
+        <section id="contact" class="contact full-screen">
+                        
+            <a href="mailto:jonathan.cavalcanti11@gmail.com">Contact Me</a> 
+
+        </section>
+        
+        <script>
+        
+           let emptyElement = document.querySelector('.about .empty');
+           let titleElement = document.querySelector('.title');
+
+           let figureElements = document.querySelectorAll('.service figure');
+           
+           figureElements.forEach( function( element ) {
+                element.style.background ='4353FF';
+           } );
+
+           window.addEventListener( 'mousemove', handLeMouseMove);
+
+           function handLeMouseMove( event ) {  
+
+                emptyElement.style.flexBasis = event.clientX + 'px';
+                titleElement.style.flexBasis = event.clientY/2 + 'px';
+
+                figureElements.forEach( function( element ) {
+                    element.style.flexBasis = ( window.innerWidth - event.clientX ) + 'px';
+                } );
+           }
+
+                     
+           
+        </script>
+
+    </body>
+</html>
